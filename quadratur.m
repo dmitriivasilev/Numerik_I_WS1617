@@ -1,23 +1,32 @@
-%% Universität Tübingen, WS16/17, Numerik I (Prof. Dr. Christian Lubich)
-% Programmierungsaufgabe 1.
-% Geschrieben bei: Dmitrii Vasilev, Matrikelnummer 3875096, am 29.10.2016.
-
-%% Achtung! Die funktion f würde im Voraus durch Anonyme Funktion (function handle) eingegeben,
-% z.B. f = @(x)(x^2) + 5 oder f = @(x)sin(x).
-
-
 function s = quadratur(a,b,N,f,regel)
+% Universität Tübingen, WS16/17, Numerik I (Prof. Dr. Christian Lubich)
+% Programmierungsaufgabe 1.a)
+%
+% Diese Funktion approximiert den Wert des Integrals einer gegebener Funktion f
+% mit vier verschiedenen Approximationsmethoden.
+%
+% Input:
 % a - Untere Gränze des Intervals
 % b - Obere Gränze
 % N - Anzahl der Teilintervallen
-% f - Funktion zum Integrieren
+% f - Funktion zum Integrieren.
+% Achtung! Die funktion f muss im Voraus
+% durch Anonyme Funktion (function handle) eingegeben werden,
+% z.B. f = @(x)(x^2) + 5 oder f = @(x)sin(x).
 % Bitte Approximationsregel mit einem String eingeben:
 % 'RL' = Rechtecksregel (Funktionswert wird von der linken Seite berechnet)
 % 'RR' = Rechtecksregel (Funktionswert wird von der rechten Seite berechnet)
 % 'MR' = Mittelpunktsregel
 % 'TR' = Trapezregel
 % 'SR' = Simpsonsregel
-                       
+%
+% Output:
+% s = Flächeinhalt der Funktion f auf interval [a,b].
+%
+% von: Dmitrii Vasilev
+% Matrikelnummer: 3875096
+% Datum: 29.10.16
+                   
 %Sei "s" unsere Integralsumme. Um sicher zu sein, definiere s = 0 am Anfang.
 s = 0;
 
